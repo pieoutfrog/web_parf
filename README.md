@@ -6,14 +6,13 @@
 
 Установите необходимые зависимости, используя следующую команду:
 
-    pip install requests beautifulsoup4 tqdm
-
-
+    [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=pip+install+-r+requirements.txt)](https://git.io/typing-svg)
 
 
 Скопируйте предоставленный код программы в файл с расширением .py.Раскомментируйте и настройте заголовки headers в коде, если требуется.
 
 Использование
+
  Запустите программу, запустив файл .py.
 Программа будет собирать URL-адреса товаров с веб-сайта https://goldapple.ru/ и сохранять их в файл urls.json. Если у вас уже есть файл urls.json с URL-адресами, закомментируйте строку get_urls(...) и раскомментируйте блок загрузки URL-адресов из файла.
 
