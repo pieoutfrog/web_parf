@@ -72,32 +72,31 @@ def get_data(urls):
         else:
             logging.debug(f"Requesting product page: {url}")  # Логирование информации о запрашиваемой странице
             product_soup = BeautifulSoup(product_page.text, 'lxml')
-            application_element = soup.find("div", {"text": "применение", "value": "Text_1"})
-            if application_element:
+            application_element = product_soup.find("div", {"text": "применение", "value": "Text_1"})
+            if application_element is None:
+                application = 'Нет информации'
+            else:
                 application = application_element.find("div", class_="owdA5")
                 if application:
                     application = application.text
                 else:
                     application = application_element.find("div", class_="_14lAW").text
-            else:
-                application = 'Нет информации'
-            description_div = product_soup.find('div', class_='_14lAW')
-            name_div = product_soup.find('div', class_='fLd0k')
-            price_div = product_soup.find('div', class_='VQRap szn-r')
+            description_element = product_soup.find("div", {"text": "описание", "value": "Description_0"})
+            description = description_element.find("div", {'itemprop': 'description'}).text.strip()
+            name = product_soup.find("span", class_="qKFPx").text.strip()
+            price = product_soup.find("meta", itemprop="price")["content"]
             country_of_origin = product_soup.find(string='страна происхождения')
             if country_of_origin:
                 manufacturer_country = country_of_origin.find_next('br').next_element
             else:
                 manufacturer_country = 'Нет информации'
 
-            if description_div:
-                description = description_div.get_text(strip=True)
-            else:
-                description = 'Нет информации'
-
         reviews_link = product_soup.find('a', class_='kFclw _6AiyG SEABh')
+        if reviews_link is None:
+            rating_value = '0'
+            rating_count = '0'
 
-        if reviews_link:
+        else:
             reviews_url = f'https://goldapple.ru{reviews_link.get("href")}'
             reviews_page = requests.get(reviews_url)
             logging.debug(f"Requesting reviews page: {reviews_url}")  # Логирование информации о запрашиваемой странице
@@ -109,10 +108,6 @@ def get_data(urls):
                 rating_value = '0'
                 rating_count = '0'
 
-        name = name_div.get_text(strip=True)
-        price = price_div.get_text(strip=True)
-
-        print(name)
         data = {
             'name': name,
             'price': price,
@@ -128,7 +123,7 @@ def get_data(urls):
         # Добавление словаря в список
         data_list.append(data)
 
-        time.sleep(2)  # Добавление задержки в 10 секунд между запросами
+        time.sleep(5)  # Добавление задержки в 10 секунд между запросами
 
     return data_list
 
@@ -164,6 +159,9 @@ def main():
     """
     Основная функция программы.
     """
+    # urls = get_urls('https://goldapple.ru/parfjumerija', 1, 1)
+    # with open('urls.json', 'w') as f:
+    #     json.dump(urls, f, indent=4)
 
     # Получение URL-адресов
     with open('urls.json', 'r') as file:
@@ -172,7 +170,7 @@ def main():
 
     data_list = []  # Создание списка для хранения данных
 
-    for url in tqdm(unique_urls[8000:], desc="Processing URLs", unit="URL"):
+    for url in tqdm(unique_urls, desc="Processing URLs", unit="URL"):
         try:
             data_list.extend(get_data([url]))  # Добавление данных к общему списку
             for _ in tqdm(write_to_csv(data_list, 'perfumes.csv'), desc="Writing to CSV", unit="item"):
@@ -184,3 +182,4 @@ def main():
 if __name__ == "__main__":
     main()
 # print(f"Данные успешно записаны в файл {csv_file_path}")
+
