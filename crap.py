@@ -18,6 +18,18 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 
 def get_urls(raw_url, start, end):
+    """
+    Получение URL-адресов страниц с продуктами.
+
+    Args:
+        raw_url (str): Базовый URL-адрес страницы с продуктами.
+        start (int): Номер первой страницы.
+        end (int): Номер последней страницы.
+
+    Returns:
+        list: Список URL-адресов страниц с продуктами.
+    """
+
     products_id = []
     for i in range(start, end + 1):
         products_url = f'{raw_url}?p={i}'
@@ -38,6 +50,16 @@ def get_urls(raw_url, start, end):
 
 
 def get_data(urls):
+    """
+    Получение данных о продуктах.
+
+    Args:
+        urls (list): Список URL-адресов страниц с продуктами.
+
+    Returns:
+        list: Список словарей с данными о продуктах.
+    """
+
     data_list = []
     rating_value = None
     rating_count = None
@@ -110,6 +132,17 @@ def get_data(urls):
 
 
 def write_to_csv(data_list, csv_file_path):
+    """
+    Запись данных в CSV-файл.
+
+    Args:
+        data_list (list): Список словарей с данными о продуктах.
+        csv_file_path (str): Путь к CSV-файлу.
+
+    Returns:
+        str: Сообщение об успешной записи данных в CSV-файл.
+    """
+
     fieldnames = ['name', 'price', 'url', 'description', 'application', 'rating_value', 'rating_count',
                   'manufacturer_country']
 
@@ -126,8 +159,10 @@ def write_to_csv(data_list, csv_file_path):
 
 
 def main():
-    # urls = get_urls('https://goldapple.ru/parfjumerija', 1, 424)
-    # with open('urls.json', 'w') as file:
+    """
+    Основная функция программы.
+    """
+
     # Получение URL-адресов
     with open('urls.json', 'r') as file:
         urls = json.load(file)
@@ -142,9 +177,6 @@ def main():
                 pass
         except Exception as e:
             print(f"An error occurred while processing {url}: {e}")
-            # Другие действия по обработке ошибки, если необходимо
-
-    # Запись данных в CSV-файл
 
 
 if __name__ == "__main__":
