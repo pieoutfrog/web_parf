@@ -6,7 +6,7 @@
 
 Установите необходимые зависимости, используя следующую команду:
 
-    [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=pip+install+-r+requirements.txt)](https://git.io/typing-svg)
+    pip install -r requirements.txt
 
 
 Скопируйте предоставленный код программы в файл с расширением .py.Раскомментируйте и настройте заголовки headers в коде, если требуется.
