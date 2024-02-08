@@ -1,0 +1,55 @@
+2024-01-31 20:42:26,719 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:42:28,494 - DEBUG - https://goldapple.ru:443 "GET /19000199158-lavander-vanilla HTTP/1.1" 200 None
+2024-01-31 20:42:28,498 - DEBUG - Requesting product page: https://goldapple.ru/19000199158-lavander-vanilla
+2024-01-31 20:42:28,570 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:42:30,340 - DEBUG - https://goldapple.ru:443 "GET /review/product/19000199158 HTTP/1.1" 200 None
+2024-01-31 20:42:30,342 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19000199158
+2024-01-31 20:42:40,385 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:42:42,241 - DEBUG - https://goldapple.ru:443 "GET /19000213641-love HTTP/1.1" 200 None
+2024-01-31 20:42:42,252 - DEBUG - Requesting product page: https://goldapple.ru/19000213641-love
+2024-01-31 20:42:42,331 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:42:44,055 - DEBUG - https://goldapple.ru:443 "GET /review/product/19000213641 HTTP/1.1" 200 None
+2024-01-31 20:42:44,058 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19000213641
+2024-01-31 20:42:54,121 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:01,889 - DEBUG - https://goldapple.ru:443 "GET /28330100009-no-8-tonic-vert HTTP/1.1" 200 None
+2024-01-31 20:43:01,892 - DEBUG - Requesting product page: https://goldapple.ru/28330100009-no-8-tonic-vert
+2024-01-31 20:43:01,955 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:04,536 - DEBUG - https://goldapple.ru:443 "GET /review/product/28330100009 HTTP/1.1" 200 None
+2024-01-31 20:43:04,539 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/28330100009
+2024-01-31 20:43:14,609 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:16,107 - DEBUG - https://goldapple.ru:443 "GET /19000247243-black-noir HTTP/1.1" 200 None
+2024-01-31 20:43:16,110 - DEBUG - Requesting product page: https://goldapple.ru/19000247243-black-noir
+2024-01-31 20:43:16,192 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:18,767 - DEBUG - https://goldapple.ru:443 "GET /review/product/19000247243 HTTP/1.1" 200 None
+2024-01-31 20:43:18,770 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19000247243
+2024-01-31 20:43:28,813 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:31,064 - DEBUG - https://goldapple.ru:443 "GET /19000155914-imperiale-iris-malika HTTP/1.1" 200 None
+2024-01-31 20:43:31,069 - DEBUG - Requesting product page: https://goldapple.ru/19000155914-imperiale-iris-malika
+2024-01-31 20:43:31,127 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:33,812 - DEBUG - https://goldapple.ru:443 "GET /review/product/19000155914 HTTP/1.1" 200 None
+2024-01-31 20:43:33,818 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19000155914
+2024-01-31 20:43:43,946 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:46,929 - DEBUG - https://goldapple.ru:443 "GET /19000153564-sensoriel-spritzlove HTTP/1.1" 200 None
+2024-01-31 20:43:46,933 - DEBUG - Requesting product page: https://goldapple.ru/19000153564-sensoriel-spritzlove
+2024-01-31 20:43:47,017 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:48,679 - DEBUG - https://goldapple.ru:443 "GET /review/product/19000153564 HTTP/1.1" 200 None
+2024-01-31 20:43:48,680 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19000153564
+2024-01-31 20:43:58,723 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:43:59,995 - DEBUG - https://goldapple.ru:443 "GET /19000182818-stile-classic-aqqua HTTP/1.1" 200 None
+2024-01-31 20:43:59,999 - DEBUG - Requesting product page: https://goldapple.ru/19000182818-stile-classic-aqqua
+2024-01-31 20:44:00,080 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:44:01,747 - DEBUG - https://goldapple.ru:443 "GET /review/product/19000182818 HTTP/1.1" 200 None
+2024-01-31 20:44:01,754 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19000182818
+2024-01-31 20:44:11,798 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:44:17,956 - DEBUG - https://goldapple.ru:443 "GET /19760302839-desert-suave HTTP/1.1" 200 None
+2024-01-31 20:44:17,959 - DEBUG - Requesting product page: https://goldapple.ru/19760302839-desert-suave
+2024-01-31 20:44:18,042 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:44:20,210 - DEBUG - https://goldapple.ru:443 "GET /review/product/19760302839 HTTP/1.1" 200 None
+2024-01-31 20:44:20,212 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19760302839
+2024-01-31 20:44:30,273 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:44:32,297 - DEBUG - https://goldapple.ru:443 "GET /19000199160-tobacco-bergamot HTTP/1.1" 200 None
+2024-01-31 20:44:32,300 - DEBUG - Requesting product page: https://goldapple.ru/19000199160-tobacco-bergamot
+2024-01-31 20:44:32,444 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
+2024-01-31 20:44:33,727 - DEBUG - https://goldapple.ru:443 "GET /review/product/19000199160 HTTP/1.1" 200 None
+2024-01-31 20:44:33,730 - DEBUG - Requesting reviews page: https://goldapple.ru/review/product/19000199160
+2024-01-31 20:44:43,771 - DEBUG - Starting new HTTPS connection (1): goldapple.ru:443
