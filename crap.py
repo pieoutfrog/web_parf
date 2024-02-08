@@ -72,11 +72,18 @@ def get_data(urls):
         else:
             logging.debug(f"Requesting product page: {url}")  # Логирование информации о запрашиваемой странице
             product_soup = BeautifulSoup(product_page.text, 'lxml')
-
+            application_element = soup.find("div", {"text": "применение", "value": "Text_1"})
+            if application_element:
+                application = application_element.find("div", class_="owdA5")
+                if application:
+                    application = application.text
+                else:
+                    application = application_element.find("div", class_="_14lAW").text
+            else:
+                application = 'Нет информации'
             description_div = product_soup.find('div', class_='_14lAW')
             name_div = product_soup.find('div', class_='fLd0k')
             price_div = product_soup.find('div', class_='VQRap szn-r')
-            application_div = product_soup.find('div', string='применение')
             country_of_origin = product_soup.find(string='страна происхождения')
             if country_of_origin:
                 manufacturer_country = country_of_origin.find_next('br').next_element
@@ -87,11 +94,6 @@ def get_data(urls):
                 description = description_div.get_text(strip=True)
             else:
                 description = 'Нет информации'
-
-            if application_div:
-                application = application_div.find('div', class_='_14lAW').get_text()
-            else:
-                application = 'Нет информации'
 
         reviews_link = product_soup.find('a', class_='kFclw _6AiyG SEABh')
 
